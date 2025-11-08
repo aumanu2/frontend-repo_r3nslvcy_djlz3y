@@ -1,14 +1,34 @@
-import Spline from '@splinetool/react-spline';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] w-full overflow-hidden" id="home">
+      {/* Background: Dark + Emerald gradient mesh with subtle grid */}
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/xW-uaUprkPUPPfRw/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <div className="absolute inset-0 bg-black" />
+        <div
+          className="absolute inset-0 opacity-90"
+          style={{
+            backgroundImage:
+              'radial-gradient(60rem 60rem at 10% 10%, rgba(16,185,129,0.18), transparent 40%), radial-gradient(50rem 40rem at 90% 20%, rgba(16,185,129,0.12), transparent 45%), radial-gradient(60rem 50rem at 50% 100%, rgba(16,185,129,0.16), transparent 45%)',
+          }}
+        />
+        <div
+          className="absolute inset-0 opacity-[0.08]"
+          style={{
+            backgroundImage:
+              'linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)',
+            backgroundSize: '56px 56px',
+            maskImage:
+              'radial-gradient(circle at 50% 50%, black 0%, black 40%, transparent 80%)',
+            WebkitMaskImage:
+              'radial-gradient(circle at 50% 50%, black 0%, black 40%, transparent 80%)',
+          }}
+        />
+        <div className="absolute inset-x-0 top-0 h-64 pointer-events-none bg-gradient-to-b from-emerald-500/20 via-transparent to-transparent blur-2xl" />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black pointer-events-none" />
 
       <div className="relative z-10 pt-28 md:pt-36">
         <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-12 gap-8 items-center">
